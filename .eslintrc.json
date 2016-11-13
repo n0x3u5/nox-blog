@@ -1,0 +1,36 @@
+{
+    "extends": ["standard", "plugin:react/recommended"],
+    "env": {
+        "es6": true,
+        "node": true,
+        "amd": true,
+        "browser": true,
+        "commonjs": true,
+        "jquery": true,
+        "mongo": true,
+        "shared-node-browser": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "arrowFunctions": true,
+            "classes": true,
+            "defaultParams": true,
+            "forOf": true,
+            "templateStrings": true,
+            "impliedStrict": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "plugins": [
+        "standard",
+        "promise",
+        "react"
+    ],
+    "rules": {
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
