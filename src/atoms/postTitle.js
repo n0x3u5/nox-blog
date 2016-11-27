@@ -1,17 +1,17 @@
 import React from 'react';
 
-class PostHeading extends React.Component {
+class PostTitle extends React.Component {
   render () {
     return (
       <h2>{this.props.text}</h2>
     );
   }
 }
-PostHeading.propTypes = {
+PostTitle.propTypes = {
   text: React.PropTypes.string
 };
-PostHeading.defaultProps = {
+PostTitle.defaultProps = {
   text: ''
 };
 
-export default PostHeading;
+export default PostTitle;

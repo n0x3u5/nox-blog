@@ -1,14 +1,36 @@
 import React from 'react';
 
-import Button from '../atoms/button.js';
-import Input from '../atoms/input';
-
 class Search extends React.Component {
+  constructor (props) {
+    super(props);
+
+    this.logQuery = this.logQuery.bind(this);
+    this.inputChanged = this.inputChanged.bind(this);
+
+    this.state = {
+      input: ''
+    };
+  }
+
+  inputChanged (e) {
+    this.setState({
+      input: e.target.value
+    });
+  }
+
+  logQuery () {
+    console.log(this.state.input);
+  }
+
+  buttonText () {
+    return this.state.input || 'Search Posts';
+  }
+
   render () {
     return (
       <span>
-        <Input type="text" placeholder="Search..." />
-        <Button text="Search Posts" />
+        <input type="text" placeholder="Search..." onChange={this.inputChanged} />
+        <button onClick={this.logQuery}>{this.buttonText()}</button>
       </span>
     );
   }
